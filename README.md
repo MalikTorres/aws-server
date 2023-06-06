@@ -1,43 +1,57 @@
-# package.json Notes
+# LAB - Class 16
 
-## For React Applications
+## Project: AWS Server
 
-To deploy your application at GitHub pages, you'll need to add a home page property to your package.json which points to the deployed base URL of your GitHub Pages site.
+### Author:  Malik Sadiki-Torres
 
-*NOTE: This will break deployments to other hosting services such as Netlify, Vercel, or AWS Amplify, so if you later wish to deploy there, remove this property completely.*
+### Problem Domain
 
-```json
-{
-  "homepage": "https://yourname.github.io/repository-name"
-}
-```
+AWS server deployment
 
-## Node / Express Applications
+### Process
 
-### For Tests
+1. Create user within aws
+2. access proper keys
+3. follow command line promps
+4. create application within aws and follow the prompts
+5. input role access where necessary.
 
-Your scripts section should have the following, so that you can easily run tests locally and in your CI.
+### Links and Resources
 
-```json
-  "scripts": {
-    "start": "node index.js",
-    "test": "jest --verbose --coverage",
-    "test-watch": "jest --watchAll --verbose --coverage",
-    "init:config": "sequelize init:config",
-    "db:create": "sequelize db:create"
-},
-```
+- [DEV enviornment](http://aws-server-dev.us-east-2.elasticbeanstalk.com/)
+- [ENV Deployment](http://aws-server-env.eba-8muntfwy.us-east-2.elasticbeanstalk.com/)
 
-### For NPM Modules
 
-If you are creating a module to deploy at NPM, you'll want a "bin" section that identifies the name of the global command to run and your .js file that runs when called.
+### Collaborators
+I referenced the demo video and the lecture md
 
-```json
-"bin": {
-    "fetch": "index.js"
-}
-```
+### Setup
 
-Additionally, that file should have as it's first line, so that it'll run without having to type "node filename.js" every time
+Install:
 
-`#!/usr/bin/env node`
+1. `npm init -y`
+2. `npm install express dotenv`
+2.  Create `env` file
+
+
+
+#### `.env` requirements (where applicable)
+
+Establish port in env
+
+#### How to initialize/run your application (where applicable)
+
+clone repo, `npm i` to install the required dependencies to run this application
+
+
+#### Routes
+
+Test with aws enviornments
+
+#### Tests
+Not applicable
+
+#### UML
+
+![UML image](./assets/aws.png)
+
